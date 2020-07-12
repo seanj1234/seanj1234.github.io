@@ -132,7 +132,7 @@
       },
       "name": "y",
       "nice": true,
-      "range": 10
+      "range": "height"
     },
     {
       "domain": {
