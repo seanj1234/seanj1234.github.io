@@ -76,7 +76,7 @@
           {
             "height": "data.val",
             "point": "data.idx",
-            "type": "stack"
+            "type": "line"
           }
         ]
       },
