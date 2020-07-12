@@ -18,12 +18,12 @@
       "values": [
         {
           "col": "Happiness Score",
-          "idx": 1000000,
+          "idx": 1000000000,
           "val": 8.0
         },
         {
           "col": "Happiness Score",
-          "idx": 1400000000000,
+          "idx": 10000000000,
           "val": 6.0
         }
       ]
