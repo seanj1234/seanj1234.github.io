@@ -41,6 +41,22 @@
           "idx": 80000000,
           "val": 6.028
         }
+        ]
+    },
+    {
+      "name": "stats",
+      "source": "table",
+      "transform": [
+        {
+          "keys": [
+            "data.idx"
+          ],
+          "type": "facet"
+        },
+        {
+          "type": "stats",
+          "value": "data.val"
+        }
       ]
     }
   ],
@@ -56,6 +72,11 @@
               "data.col"
             ],
             "type": "facet"
+          },
+          {
+            "height": "data.val",
+            "point": "data.idx",
+            "type": "stack"
           }
         ]
       },
@@ -63,24 +84,30 @@
         {
           "properties": {
             "enter": {
-              "stroke": {
+              "fill": {
                 "field": "data.col",
                 "scale": "color"
               },
-              "strokeWidth": {
-                "value": 2
+              "width": {
+                "band": true,
+                "offset": -1,
+                "scale": "x"
               },
               "x": {
                 "field": "data.idx",
                 "scale": "x"
               },
               "y": {
-                "field": "data.val",
+                "field": "y",
+                "scale": "y"
+              },
+              "y2": {
+                "field": "y2",
                 "scale": "y"
               }
             }
           },
-          "type": "line"
+          "type": "rect"
         }
       ],
       "type": "group"
@@ -95,12 +122,13 @@
       },
       "name": "x",
       "range": "width",
-      "type": "time"
+      "type": "ordinal",
+      "zero": false
     },
     {
       "domain": {
-        "data": "table",
-        "field": "data.val"
+        "data": "stats",
+        "field": "sum"
       },
       "name": "y",
       "nice": true,
