@@ -1,4 +1,3 @@
-
 {
   "axes": [
     {
@@ -8,7 +7,7 @@
     },
     {
       "scale": "y",
-      "title": "Happiness Score",
+      "title": "Happiness Score ",
       "type": "y"
     }
   ],
@@ -26,7 +25,7 @@
           "idx": 4000000,
           "val": 7.509
         },
-             {
+          {
           "col": "Happiness Score",
           "idx": 5000000,
           "val": 7.494
@@ -40,22 +39,6 @@
           "col": "Happiness Score",
           "idx": 7000000,
           "val": 7.48
-        }
-       ]
-    },
-    {
-      "name": "stats",
-      "source": "table",
-      "transform": [
-        {
-          "keys": [
-            "data.idx"
-          ],
-          "type": "facet"
-        },
-        {
-          "type": "stats",
-          "value": "data.val"
         }
       ]
     }
@@ -72,11 +55,6 @@
               "data.col"
             ],
             "type": "facet"
-          },
-          {
-            "height": "data.val",
-            "point": [5,5,5,5,5],
-            "type": "stack"
           }
         ]
       },
@@ -84,30 +62,24 @@
         {
           "properties": {
             "enter": {
-              "fill": {
+              "stroke": {
                 "field": "data.col",
                 "scale": "color"
               },
-              "width": {
-                "band": true,
-                "offset": -1,
-                "scale": "x"
+              "strokeWidth": {
+                "value": 2
               },
               "x": {
                 "field": "data.idx",
                 "scale": "x"
               },
               "y": {
-                "field": "y",
-                "scale": "y"
-              },
-              "y2": {
-                "field": "y2",
+                "field": "data.val",
                 "scale": "y"
               }
             }
           },
-          "type": "rect"
+          "type": "line"
         }
       ],
       "type": "group"
@@ -122,13 +94,12 @@
       },
       "name": "x",
       "range": "width",
-      "type": "ordinal",
-      "zero": false
+      "type": "time"
     },
     {
       "domain": {
-        "data": "stats",
-        "field": "sum"
+        "data": "table",
+        "field": "data.val"
       },
       "name": "y",
       "nice": true,
@@ -144,5 +115,5 @@
       "type": "ordinal"
     }
   ],
-  "width": 150
+  "width": 400
 }
