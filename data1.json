@@ -8,7 +8,7 @@
     },
     {
       "scale": "y",
-      "title": "Year",
+      "title": "Happiness Score",
       "type": "y"
     }
   ],
@@ -76,7 +76,7 @@
           {
             "height": "data.val",
             "point": "data.idx",
-            "type": "line"
+            "type": "stack"
           }
         ]
       },
@@ -132,7 +132,7 @@
       },
       "name": "y",
       "nice": true,
-      "range": "height"
+      "range": 10
     },
     {
       "domain": {
