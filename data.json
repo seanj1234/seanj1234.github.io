@@ -18,7 +18,7 @@
       "values": [
         {
           "col": "Happiness Score",
-          "idx": 10000,
+          "idx": 100000,
           "val": 8.0
         },
         {
