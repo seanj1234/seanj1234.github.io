@@ -1,4 +1,3 @@
-
 {
   "axes": [
     {
@@ -8,7 +7,7 @@
     },
     {
       "scale": "y",
-      "title": "Year",
+      "title": "Happiness Score ",
       "type": "y"
     }
   ],
@@ -16,31 +15,31 @@
     {
       "name": "table",
       "values": [
-        {
+        {	
           "col": "Happiness Score",
-          "idx": 30000000,
-          "val": 5.975	
+          "idx": 3000000,
+          "val": 5.975
         },
           {
           "col": "Happiness Score",
-          "idx": 40000000,
+          "idx": 4000000,
           "val": 5.976
         },
           {
           "col": "Happiness Score",
-          "idx": 50000000,
-          "val": 6.007999897	
+          "idx": 4000000,
+          "val": 6.007999897
         },
           {
           "col": "Happiness Score",
-          "idx": 60000000,
-          "val": 5.973
+          "idx": 5000000,
+          "val": 5.973	
         },
           {
           "col": "Happiness Score",
-          "idx": 80000000,
+          "idx": 6000000,
           "val": 6.028
-        }
+               }
       ]
     }
   ],
@@ -56,11 +55,6 @@
               "data.col"
             ],
             "type": "facet"
-          },
-          {
-            "height": "data.val",
-            "point": "data.idx",
-            "type": "stack"
           }
         ]
       },
@@ -68,30 +62,24 @@
         {
           "properties": {
             "enter": {
-              "fill": {
+              "stroke": {
                 "field": "data.col",
                 "scale": "color"
               },
-              "width": {
-                "band": true,
-                "offset": -1,
-                "scale": "x"
+              "strokeWidth": {
+                "value": 2
               },
               "x": {
                 "field": "data.idx",
                 "scale": "x"
               },
               "y": {
-                "field": "y",
-                "scale": "y"
-              },
-              "y2": {
-                "field": "y2",
+                "field": "data.val",
                 "scale": "y"
               }
             }
           },
-          "type": "rect"
+          "type": "line"
         }
       ],
       "type": "group"
@@ -106,13 +94,12 @@
       },
       "name": "x",
       "range": "width",
-      "type": "ordinal",
-      "zero": false
+      "type": "time"
     },
     {
       "domain": {
-        "data": "stats",
-        "field": "sum"
+        "data": "table",
+        "field": "data.val"
       },
       "name": "y",
       "nice": true,
@@ -130,3 +117,4 @@
   ],
   "width": 400
 }
+         
