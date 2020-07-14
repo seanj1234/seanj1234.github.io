@@ -95,8 +95,8 @@
         "field": "data.idx"
       },
       "name": "x",
-      “nice”: true,
-      “range”: "height"
+      "nice": true,
+      "range": "height"
     },
     {
       "domain": {
