@@ -22,7 +22,7 @@
         },
           {
           "col": "Happiness Score",
-          "date": 2016,
+          "integer": 2016,
           "val": 5.976
         },
           {
