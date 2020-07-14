@@ -2,7 +2,7 @@
   "axes": [
     {
       "scale": "x",
-      "title": "Greece: Year",
+      "title": "Ecuador: Year",
       "type": "x"
     },
     {
@@ -22,7 +22,7 @@
         },
           {
           "col": "Happiness Score",
-          "idx": 4000000,
+          "idx": 3000000,
           "val": 5.976
         },
           {
