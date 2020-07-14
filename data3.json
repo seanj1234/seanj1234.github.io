@@ -94,7 +94,7 @@
       },
       "name": "x",
       "range": "width",
-      "type": "date"
+      "type": "integer"
     },
     {
       "domain": {
