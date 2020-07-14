@@ -17,7 +17,7 @@
       "values": [
         {	
           "col": "Happiness Score",
-          "date": 2015,
+          "integer": 2015,
           "val": 5.975
         },
           {
@@ -27,17 +27,17 @@
         },
           {
           "col": "Happiness Score",
-          "date": 2017,
+          "integer": 2017,
           "val": 6.007999897
         },
           {
           "col": "Happiness Score",
-          "date": 2018,
+          "integer": 2018,
           "val": 5.973	
         },
           {
           "col": "Happiness Score",
-          "date": 6000000,
+          "integer": 6000000,
           "val": 6.028
                }
       ]
@@ -70,7 +70,7 @@
                 "value": 2
               },
               "x": {
-                "field": "data.date",
+                "field": "data.integer",
                 "scale": "x"
               },
               "y": {
@@ -90,7 +90,7 @@
     {
       "domain": {
         "data": "table",
-        "field": "data.date"
+        "field": "data.integer"
       },
       "name": "x",
       "range": "width",
